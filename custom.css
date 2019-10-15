@@ -46,25 +46,11 @@ h1 {
     100% { transform: rotate(-9deg); }
 }
 
-  @keyframes swing-bottom-fwd {
-    0% {
-      -webkit-transform: rotateX(0);
-              transform: rotateX(0);
-      -webkit-transform-origin: bottom;
-              transform-origin: bottom;
-    }
-    100% {
-      -webkit-transform: rotateX(-180deg);
-              transform: rotateX(-180deg);
-      -webkit-transform-origin: bottom;
-              transform-origin: bottom;
-             
-    }
-  }
+
   
 
   
-  @keyframes bounceIn {
+  @keyframes bounce {
     from,
     20%,
     40%,
@@ -120,7 +106,7 @@ h1 {
 
 
       .animateaa {
-        animation: bounceIn 1s ease-in;
+        animation: bounce 1s ease-in;
       }
 
       .rotate360 {
