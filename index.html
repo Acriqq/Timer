@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clock</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+    <main id="clock" >
+        <h1>Clocko-Timer</h1>
+        <span id="hour"></span>
+        <span id="minutes"></span>
+        <span id="seconds"></span>
+        <span id="milliseconds"></span>
+    </main>
+
+    <script>
+        function showCurrentTime() {
+            let date = new Date();
+            let hours, minutes, seconds, milliseconds;
+            const myClockHour = document.getElementById("hour");
+            const myClockMinutes = document.getElementById("minutes");
+            const myClockSeconds = document.getElementById("seconds");
+            const myClockmilliseconds = document.getElementById("milliseconds");
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            milliseconds = date.getMilliseconds();
+            myClockHour.innerText = hours;
+            myClockMinutes.innerText = minutes;
+            myClockSeconds.innerText = seconds;
+            myClockmilliseconds.innerText = milliseconds;
+
+            (function () {
+                if (seconds == 0) {
+                    myClockMinutes.classList.add("rotate360")
+
+                } else {
+                    myClockMinutes.classList.remove("rotate360")
+                }
+
+ 
+
+                 
+                
+            })();
+
+
+        }
+        let intervalOneSec = setInterval(showCurrentTime, 1)
+
+        function stopClock() {
+            clearInterval(intervalOneSec);
+        }
+    </script>
+</body>
+
+</html>
