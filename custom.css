@@ -28,7 +28,7 @@ span:nth-child(5) {
  
 }
 span:nth-child(4) {
-  animation: bounceIn 1s ease-in infinite;
+  animation: bounce 1s ease-in infinite;
  
 }
 h1 {
